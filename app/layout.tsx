@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import Image from "next/image";
+import trangleLogo from '@/public/logotriangle.png';
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,7 +18,20 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={`${inter.className} min-h-screen flex items-start`}>
+        <div className="w-full max-w-7xl mx-auto flex flex-col items-center p-5">
+          <div className="flex flex-row items-center">
+            <Image src={trangleLogo} alt='logo' />
+            <div className="flex flex-col space-y-5 justify-between px-5 py-5">
+              <h1 className="text-5xl">Transcrypto</h1>
+              <p>Any audio or video, we know all about it!</p>
+            </div>
+          </div>
+          <div className="flex flex-col w-full">
+            {children}
+          </div>
+        </div>
+      </body>
     </html>
   );
 }
