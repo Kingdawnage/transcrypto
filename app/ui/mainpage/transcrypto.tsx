@@ -13,11 +13,11 @@ export default async function Transcrypto(
     req: NextApiRequest,
     res: NextApiResponse<Data>
 ) {
-    const completion = await openai.createCompletion({
-        model: 'text-davinci-003',
-        prompt: 'what is 50 minus 10'
-    });
-    res.status(200).json(completion);
+    // const completion = await openai.createCompletion({
+    //     model: 'text-davinci-003',
+    //     prompt: 'what is 50 minus 10'
+    // });
+    // res.status(200).json(completion);
     // receive some user data, ask chat gpt something here @Kingdawnage
 
   return (

@@ -18,16 +18,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} min-h-screen flex items-start`}>
-        <div className="w-full max-w-7xl mx-auto flex flex-col items-center p-5">
+      <body className={`${inter.className} min-h-screen flex mx-auto bg-gradient-to-r from-gray-900 via-gray-800 to-gray-700 bg-clip-text animate-pulse`}>
+        <div className="w-full mx-auto flex flex-col items-center p-5">
           <div className="flex flex-row items-center">
-            <Image src={trangleLogo} alt='logo' />
-            <div className="flex flex-col space-y-5 justify-between px-5 py-5">
-              <h1 className="text-5xl">Transcrypto</h1>
-              <p>Any audio or video, we know all about it!</p>
+            <Image src={trangleLogo} className="w-10" alt='logo' />
+            <div className="flex flex-col space-y-1 justify-between px-1">
+              <h1 className="text-md font-semibold text-white">Transcrypto</h1>
+              <p className="text-[10px] text-white">Any audio or video, we know all about it!</p>
             </div>
           </div>
-          <div className="flex flex-col w-full">
+          <div className="justify-center ">
             {children}
           </div>
         </div>
